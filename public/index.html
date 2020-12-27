@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+        <link rel="icon" href="/img/weather.png">
+        <link rel="stylesheet" href="/css/styles.css" />
+        <title>Node Weather App</title>
+    </head>
+
+    <body>
+        <div class="overlay">Loading....</div>
+        <div class="App" id="app">
+            <main class="main-section">
+                <header class="app-header">
+                    <h1>the.weather</h1>
+                </header>
+
+                <h2 class="error-message" id="error-message"></h2>
+
+                <section class="location-details">
+                    <h2 class="degrees"><span id="temperature"></span>&#176;C</h2>
+                    <div class="location">
+                        <h2 class="location-city"></h2>
+                        <p>
+                            <span class="location-time"></span>
+                        </p>
+                    </div>
+                    <img id="weather-icon" class="weather-icon" />
+                </section>
+            </main>
+
+            <aside class="sidebar">
+                <form class="search-form" id="search-form">
+                    <input
+                        type="text"
+                        placeholder="Search Location"
+                        id="search-input"
+                    />
+                    <button class="search-button"><i class="lni lni-search-alt"></i></button>
+                </form>
+
+                <div class="popular-locations">
+                    <h2>Popular Cities</h2>
+                    <ul class="popular-locations-items">
+                        <li>New York <span class="city-temp"></span></li>
+                        <li>London <span class="city-temp"></span></li>
+                        <li>Paris <span class="city-temp"></span></li>
+                        <li>Stockholm <span class="city-temp"></span></li>
+                        <li>Amsterdam <span class="city-temp"></span></li>
+                    </ul>
+                </div>
+
+                <div class="weather-details">
+                    <h2>Weather details for <span id="address"></span></h2>
+                    <ul>
+                        <li>
+                            <h3>Description</h3>
+                            <p id="description"></p>
+                        </li>
+                        <li>
+                            <h3>Zone Name</h3>
+                            <p id="zone-name"></p>
+                        </li>
+                        <li>
+                            <h3>Cloudy</h3>
+                            <p id="cloudy"></p>
+                        </li>
+                        <li>
+                            <h3>Humidity</h3>
+                            <p id="humidity"></p>
+                        </li>
+                        <li>
+                            <h3>Wind</h3>
+                            <p id="wind"></p>
+                        </li>
+                        <li>
+                            <h3>Pressure</h3>
+                            <p id="pressure"></p>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+        <script src="/js/app.js"></script>
+    </body>
+</html>
