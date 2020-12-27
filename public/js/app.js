@@ -30,7 +30,7 @@ window.onload = function () {
 };
 
 function getCityTemp(city) {
-    fetch("http://localhost:3000/weather?address=" + city.textContent)
+    fetch("/weather?address=" + city.textContent)
         .then((response) => response.json())
         .then((data) => {
             if (data.error) {
@@ -82,7 +82,7 @@ function getCityData(event) {
 function fetchWeatherData(address) {
     overlay.style.display = "flex";
 
-    fetch("http://localhost:3000/weather?address=" + address)
+    fetch("/weather?address=" + address)
         .then((response) => response.json())
         .then((data) => {
             overlay.style.display = "none";
